@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kedai Coffee</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f1ea;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #6f4e37;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .menu {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .menu img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .menu h3 {
+      margin: 10px 0 5px;
+      color: #6f4e37;
+    }
+
+    .menu p {
+      color: #555;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #000;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      background: #6f4e37;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kedai Coffee</h1>
+    <p>Nikmati Kopi Favorit Anda</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Original Coffee -->
+    <div class="menu">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Original Coffee">
+      <h3>Original Coffee</h3>
+      <p>Kopi hitam original dengan cita rasa khas.</p>
+      <div class="price">Rp 15.000</div>
+    </div>
+
+    <!-- Gula Aren -->
+    <div class="menu">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Coffee Gula Aren">
+      <h3>Coffee Gula Aren</h3>
+      <p>Perpaduan kopi dan manis alami gula aren.</p>
+      <div class="price">Rp 20.000</div>
+    </div>
+
+    <!-- Matcha -->
+    <div class="menu">
+      <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7" alt="Matcha Coffee">
+      <h3>Matcha Coffee</h3>
+      <p>Campuran matcha premium dan espresso.</p>
+      <div class="price">Rp 22.000</div>
+    </div>
+
+    <!-- Coklat -->
+    <div class="menu">
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Chocolate Coffee">
+      <h3>Chocolate Coffee</h3>
+      <p>Kopi creamy dengan rasa coklat lezat.</p>
+      <div class="price">Rp 21.000</div>
+    </div>
+
+    <!-- Espresso -->
+    <div class="menu">
+      <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c" alt="Espresso">
+      <h3>Espresso</h3>
+      <p>Espresso kuat dan nikmat untuk energi Anda.</p>
+      <div class="price">Rp 18.000</div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Kedai Coffee - Semua Hak Dilindungi</p>
+  </footer>
+
+</body>
+</html>
