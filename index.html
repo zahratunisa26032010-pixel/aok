@@ -1,215 +1,307 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMK N 2 Tembilahan - Futuristik</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        dark: '#0F172A',
-                        'dark-light': '#1E293B',
-                        neon: '#00F5FF',
-                        'neon-pink': '#FF2E63',
-                        'neon-yellow': '#FFE400',
-                    },
-                    fontFamily: {
-                        orbitron: ['Orbitron', 'sans-serif'],
-                        poppins: ['Poppins', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'neon-blue': '0 0 10px #00F5FF, 0 0 40px rgba(0, 245, 255, 0.2)',
-                        'neon-pink': '0 0 10px #FF2E63, 0 0 40px rgba(255, 46, 99, 0.2)',
-                        'neon-yellow': '0 0 10px #FFE400, 0 0 40px rgba(255, 228, 0, 0.2)',
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .text-neon {
-                text-shadow: 0 0 8px currentColor;
-            }
-            .border-gradient {
-                border-image: linear-gradient(45deg, #00F5FF, #FF2E63) 1;
-            }
-            .scrollbar-hide {
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-            }
-            .scrollbar-hide::-webkit-scrollbar {
-                display: none;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SMK N 2 Tembilahan</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f5f5f5;
+}
+
+header{
+background:white;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#1f3c98;
+}
+
+nav a{
+text-decoration:none;
+margin:0 10px;
+color:#333;
+}
+
+.btn{
+background:#1f3c98;
+padding:10px 20px;
+color:white;
+border-radius:20px;
+}
+
+.hero{
+background:#1f3c98;
+color:white;
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:60px 0;
+}
+
+.title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.title h2{
+font-size:40px;
+color:#1f3c98;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card h3{
+margin:15px 0;
+color:#1f3c98;
+}
+
+.icon{
+font-size:40px;
+}
+
+.fasilitas{
+background:#1f3c98;
+color:white;
+padding:60px 20px;
+text-align:center;
+}
+
+.fasilitas-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.f-item{
+background:rgba(255,255,255,0.1);
+padding:30px;
+border-radius:20px;
+}
+
+.kontak{
+background:#1f3c98;
+color:white;
+padding:50px;
+border-radius:20px;
+}
+
+footer{
+background:#12285f;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+}
+
+</style>
 </head>
-<body class="bg-dark text-white font-poppins">
 
-    <!-- Efek Latar Belakang -->
-    <div class="fixed inset-0 z-0 overflow-hidden">
-        <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-neon/10 blur-[100px]"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-neon-pink/10 blur-[100px]"></div>
-    </div>
+<body>
 
-    <!-- Navbar -->
-    <nav class="fixed w-full top-0 z-50 bg-dark-light/80 backdrop-blur-md border-b border-neon/20">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-dark flex items-center justify-center text-neon text-xl shadow-neon-blue">
-                    <i class="fa fa-graduation-cap"></i>
-                </div>
-                <div>
-                    <h1 class="text-lg font-orbitron font-bold text-neon">SMK N 2 TEMBILAHAN</h1>
-                    <p class="text-xs text-gray-400">Bisa! Hebat! Siap Kerja!</p>
-                </div>
-            </div>
-            <div class="hidden md:flex gap-8">
-                <a href="#visi" class="hover:text-neon transition-colors">Visi Misi</a>
-                <a href="#jurusan" class="hover:text-neon-pink transition-colors">Program</a>
-                <a href="#fasilitas" class="hover:text-neon-yellow transition-colors">Fasilitas</a>
-                <a href="#kontak" class="hover:text-neon transition-colors">Kontak</a>
-            </div>
-            <button class="md:hidden text-2xl">☰</button>
-        </div>
-    </nav>
+<header>
 
-    <main class="relative z-10 pt-28 pb-16">
-        <!-- Bagian Visi - Desain Kotak Terpotong -->
-        <section id="visi" class="container mx-auto px-6 mb-24">
-            <div class="relative">
-                <div class="absolute -left-4 top-0 w-1 h-full bg-neon"></div>
-                <p class="text-neon font-orbitron tracking-widest">ARAH GERAK KAMI</p>
-                <h2 class="text-[clamp(2rem,5vw,4rem)] font-orbitron font-bold mt-2 mb-10">
-                    VISI & <span class="text-neon-pink text-neon">MISI</span>
-                </h2>
-            </div>
+<div class="logo">
+SMK N 2 Tembilahan
+</div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Kartu Visi -->
-                <div class="bg-dark-light/50 backdrop-blur-sm p-8 rounded-r-3xl rounded-bl-3xl border border-neon/30 shadow-neon-blue relative overflow-hidden">
-                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-neon/20 rounded-full blur-xl"></div>
-                    <h3 class="text-2xl font-orbitron text-neon mb-4">VISI</h3>
-                    <p class="text-lg leading-relaxed text-gray-200">
-                        "Menjadi lembaga pendidikan vokasi yang <span class="text-neon font-semibold">Unggul, Berkarakter, Berwawasan Lingkungan</span>, dan mampu menghasilkan lulusan kompeten serta berdaya saing global di era digital."
-                    </p>
-                </div>
+<nav>
+<a href="#">Beranda</a>
+<a href="#">Visi Misi</a>
+<a href="#">Jurusan</a>
+<a href="#">Kontak</a>
+<a href="#" class="btn">PPDB</a>
+</nav>
 
-                <!-- Kartu Misi -->
-                <div class="bg-dark-light/50 backdrop-blur-sm p-8 rounded-l-3xl rounded-br-3xl border border-neon-pink/30 shadow-neon-pink">
-                    <h3 class="text-2xl font-orbitron text-neon-pink mb-4">MISI</h3>
-                    <ul class="space-y-3 text-gray-200">
-                        <li class="flex gap-3"><span class="text-neon-pink">▹</span> Pembelajaran berbasis Teaching Factory sesuai industri.</li>
-                        <li class="flex gap-3"><span class="text-neon-pink">▹</span> Membentuk karakter iman, disiplin, dan wirausaha.</li>
-                        <li class="flex gap-3"><span class="text-neon-pink">▹</span> Lingkungan hijau, aman, dan inovatif.</li>
-                        <li class="flex gap-3"><span class="text-neon-pink">▹</span> Kemitraan luas dengan berbagai pihak.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+</header>
 
-        <!-- Bagian Jurusan - Desain Horizontal Scroll Unik -->
-        <section id="jurusan" class="mb-24">
-            <div class="container mx-auto px-6 mb-10">
-                <p class="text-neon-pink font-orbitron tracking-widest">KEAHLIAN KAMI</p>
-                <h2 class="text-[clamp(2rem,5vw,3rem)] font-orbitron font-bold mt-2">9 PROGRAM UNGGULAN</h2>
-            </div>
-            
-            <div class="flex gap-6 overflow-x-auto px-6 pb-8 scrollbar-hide">
-                <!-- Kartu 1 -->
-                <div class="min-w-[320px] bg-dark-light/60 backdrop-blur-md rounded-2xl p-6 border border-neon/20 hover:border-neon/60 transition-all hover:scale-105 hover:shadow-neon-blue">
-                    <div class="w-12 h-12 rounded-lg bg-neon/10 text-neon flex items-center justify-center text-xl mb-4">💻</div>
-                    <h3 class="font-orbitron font-semibold text-lg mb-2">Teknik Jaringan</h3>
-                    <p class="text-sm text-gray-400 mb-3">Server, Keamanan Siber, Fiber Optik.</p>
-                    <div class="text-xs text-neon font-medium">✓ Sertifikat Mikrotik & Cisco</div>
-                </div>
+<section class="hero">
 
-                <!-- Kartu 2 -->
-                <div class="min-w-[320px] bg-dark-light/60 backdrop-blur-md rounded-2xl p-6 border border-neon-yellow/20 hover:border-neon-yellow/60 transition-all hover:scale-105 hover:shadow-neon-yellow">
-                    <div class="w-12 h-12 rounded-lg bg-neon-yellow/10 text-neon-yellow flex items-center justify-center text-xl mb-4">🌱</div>
-                    <h3 class="font-orbitron font-semibold text-lg mb-2">Energi Biomasa</h3>
-                    <p class="text-sm text-gray-400 mb-3">Konversi limbah kelapa/sawit jadi energi.</p>
-                    <div class="text-xs text-neon-yellow font-medium">✓ Satu-satunya di daerah</div>
-                </div>
+<h1>SMK Negeri 2 Tembilahan</h1>
 
-                <!-- Kartu 3 -->
-                <div class="min-w-[320px] bg-dark-light/60 backdrop-blur-md rounded-2xl p-6 border border-neon-pink/20 hover:border-neon-pink/60 transition-all hover:scale-105 hover:shadow-neon-pink">
-                    <div class="w-12 h-12 rounded-lg bg-neon-pink/10 text-neon-pink flex items-center justify-center text-xl mb-4">⚡</div>
-                    <h3 class="font-orbitron font-semibold text-lg mb-2">Teknik Listrik</h3>
-                    <p class="text-sm text-gray-400 mb-3">Instalasi, Otomasi PLC, Standar PLN.</p>
-                    <div class="text-xs text-neon-pink font-medium">✓ Sertifikasi Kompetensi</div>
-                </div>
+<p>
+Sekolah vokasi modern dengan berbagai program keahlian unggulan.
+</p>
 
-                <!-- Kartu 4 -->
-                <div class="min-w-[320px] bg-dark-light/60 backdrop-blur-md rounded-2xl p-6 border border-neon/20 hover:border-neon/60 transition-all hover:scale-105 hover:shadow-neon-blue">
-                    <div class="w-12 h-12 rounded-lg bg-neon/10 text-neon flex items-center justify-center text-xl mb-4">🗺️</div>
-                    <h3 class="font-orbitron font-semibold text-lg mb-2">Teknik Geomatika</h3>
-                    <p class="text-sm text-gray-400 mb-3">Pemetaan Drone, GPS, Total Station.</p>
-                    <div class="text-xs text-neon font-medium">✓ Dicari BPN & Tambang</div>
-                </div>
+</section>
 
-                <!-- Kartu 5 -->
-                <div class="min-w-[320px] bg-dark-light/60 backdrop-blur-md rounded-2xl p-6 border border-neon-yellow/20 hover:border-neon-yellow/60 transition-all hover:scale-105 hover:shadow-neon-yellow">
-                    <div class="w-12 h-12 rounded-lg bg-neon-yellow/10 text-neon-yellow flex items-center justify-center text-xl mb-4">🔧</div>
-                    <h3 class="font-orbitron font-semibold text-lg mb-2">Teknik Permesinan</h3>
-                    <p class="text-sm text-gray-400 mb-3">Mesin CNC, Bubut, CAD/CAM.</p>
-                    <div class="text-xs text-neon-yellow font-medium">✓ Industri Manufaktur</div>
-                </div>
-            </div>
-        </section>
+<section class="container">
 
-        <!-- Bagian Fasilitas - Ikon Besar -->
-        <section id="fasilitas" class="container mx-auto px-6 mb-24">
-            <h2 class="text-center text-[clamp(1.8rem,4vw,2.5rem)] font-orbitron font-bold mb-16">
-                <span class="text-neon-yellow">FASILITAS</span> PENUNJANG
-            </h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="group">
-                    <div class="w-20 h-20 mx-auto rounded-full bg-dark-light flex items-center justify-center text-3xl text-neon group-hover:shadow-neon-blue group-hover:scale-110 transition-all">💻</div>
-                    <p class="mt-4 font-medium">Lab Komputer</p>
-                </div>
-                <div class="group">
-                    <div class="w-20 h-20 mx-auto rounded-full bg-dark-light flex items-center justify-center text-3xl text-neon-pink group-hover:shadow-neon-pink group-hover:scale-110 transition-all">🏭</div>
-                    <p class="mt-4 font-medium">Bengkel Industri</p>
-                </div>
-                <div class="group">
-                    <div class="w-20 h-20 mx-auto rounded-full bg-dark-light flex items-center justify-center text-3xl text-neon-yellow group-hover:shadow-neon-yellow group-hover:scale-110 transition-all">📚</div>
-                    <p class="mt-4 font-medium">Perpustakaan Digital</p>
-                </div>
-                <div class="group">
-                    <div class="w-20 h-20 mx-auto rounded-full bg-dark-light flex items-center justify-center text-3xl text-neon group-hover:shadow-neon-blue group-hover:scale-110 transition-all">🕌</div>
-                    <p class="mt-4 font-medium">Sarana Ibadah</p>
-                </div>
-            </div>
-        </section>
+<div class="title">
+<h2>Program Keahlian</h2>
+</div>
 
-        <!-- Bagian Kontak - Pojok Kiri Bawah -->
-        <section id="kontak" class="container mx-auto px-6">
-            <div class="bg-dark-light/70 backdrop-blur-md rounded-3xl p-10 border-t-2 border-neon-pink/40 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-40 h-40 bg-neon-pink/5 rounded-bl-full"></div>
-                <h2 class="text-2xl font-orbitron text-neon-pink mb-6">HUBUNGI KAMI</h2>
-                <div class="grid md:grid-cols-3 gap-8 relative z-10">
-                    <div>
-                        <p class="text-gray-400 text-sm mb-1">ALAMAT</p>
-                        <p>Jl. SKB No.1, Sungai Beringin, Tembilahan, Indragiri Hilir, Riau 29214</p>
-                    </div>
-                    <div>
-                        <p class="text-gray-400 text-sm mb-1">KONTAK</p>
-                        <p>WA: 0812 6810 2595</p>
-                        <p>Email: info@smkn2tembilahan.sch.id</p>
-                    </div>
-                    <div class="flex items-end">
-                        <p class="text-xs text-gray-500">© 2024 • Siap Kerja, Siap Berkompetisi</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<div class="cards">
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>TJKT</h3>
+<p>Teknik Jaringan Komputer & Telekomunikasi.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌿</div>
+<h3>Teknik Energi Biomasa</h3>
+<p>Belajar energi terbarukan dari limbah organik.</p>
+</div>
+
+<div class="card">
+<div class="icon">⚡</div>
+<h3>Teknik Instalasi Listrik</h3>
+<p>Belajar instalasi listrik rumah dan industri.</p>
+</div>
+
+<div class="card">
+<div class="icon">⚙️</div>
+<h3>Teknik Permesinan</h3>
+<p>Belajar mesin bubut dan CNC modern.</p>
+</div>
+
+<div class="card">
+<div class="icon">🚗</div>
+<h3>Teknik Otomotif</h3>
+<p>Mempelajari kendaraan modern dan engine.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏗️</div>
+<h3>DPIB</h3>
+<p>Belajar desain bangunan dan AutoCAD.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏍️</div>
+<h3>TSM</h3>
+<p>Teknik Sepeda Motor modern.</p>
+</div>
+
+<div class="card">
+<div class="icon">🚙</div>
+<h3>TKR</h3>
+<p>Teknik Kendaraan Ringan.</p>
+</div>
+
+<div class="card">
+<div class="icon">🛰️</div>
+<h3>Teknik Geomatika</h3>
+<p>Belajar pemetaan dan drone.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="fasilitas">
+
+<h2>Fasilitas Sekolah</h2>
+
+<div class="fasilitas-grid">
+
+<div class="f-item">
+<h3>💻 Lab Komputer</h3>
+</div>
+
+<div class="f-item">
+<h3>🛠️ Bengkel Praktik</h3>
+</div>
+
+<div class="f-item">
+<h3>📚 Perpustakaan</h3>
+</div>
+
+<div class="f-item">
+<h3>🕌 Sarana Ibadah</h3>
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="kontak">
+
+<h2>Hubungi Kami</h2>
+
+<br>
+
+<p>
+📍 Jl. SKB No.1 Sungai Beringin, Tembilahan
+</p>
+
+<br>
+
+<p>
+📞 0812 6810 2595
+</p>
+
+<br>
+
+<p>
+✉️ smkn2tembilahan@gmail.com
+</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 SMK Negeri 2 Tembilahan
+</footer>
 
 </body>
 </html>
